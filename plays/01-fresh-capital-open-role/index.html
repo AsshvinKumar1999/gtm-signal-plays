@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fresh Capital + Open Role · GTM Signal Plays</title>
+<meta name="description" content="Play 01: find software companies that just told the SEC they raised money and are hiring the role you help with. Free public data, no API keys, one Claude Code prompt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><i></i>GTM Signal Plays</a>
+    <nav aria-label="Main navigation"><a href="#receipt">The run</a><a href="#how">How it works</a><a class="cta brackets" href="#prompt">Get the prompt</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="play-head" aria-labelledby="play-title">
+    <span class="bracket-tag rise">PLAY 01 · SAAS</span>
+    <h1 id="play-title" class="rise d1">Fresh Capital <em>+</em> Open Role</h1>
+    <p class="lede rise d2">Find software companies that just raised money and are hiring the kind of person your product helps. Then write to them about both.</p>
+    <div class="facts rise d3">
+      <span><b>SIGNAL A</b>SEC Form D</span>
+      <span><b>SIGNAL B</b>Live job post</span>
+      <span><b>COST</b>$0</span>
+      <span><b>API KEYS</b>None</span>
+    </div>
+  </section>
+
+  <section class="receipt2" id="receipt" aria-labelledby="receipt-title">
+    <header>
+      <h2 id="receipt-title" class="mono">What happened when I ran it</h2>
+      <span class="mono" data-r="window_label">Window</span>
+    </header>
+    <div class="steps-row">
+      <div><strong data-r="form_d_new">844</strong><span>raise filings sent to the SEC</span></div>
+      <div><strong data-r="operating">293</strong><span>were real companies, not investment funds</span></div>
+      <div><strong data-r="tech">84</strong><span>were tech companies</span></div>
+      <div><strong data-r="with_board">10</strong><span>had a jobs page we could find</span></div>
+      <div><strong data-r="tier1">4</strong><span>were hiring a sales or marketing role</span></div>
+    </div>
+    <footer><b>All 4 checked by hand</b> against their SEC filing and jobs page. Most tech companies (74 of 84) had no public jobs page yet, so the SEC filing shows up first.</footer>
+  </section>
+
+  <figure class="stage" aria-label="Animated diagram of the play">
+    <div class="stage-frame">
+      <video id="clip" src="graphic.mp4?v=3" poster="poster.png?v=3" autoplay muted loop playsinline width="1080" height="1920"></video>
+      <button class="expand" id="expand" type="button" aria-haspopup="dialog">Expand ⤢</button>
+    </div>
+    <figcaption>The whole play in 13 seconds. Every number comes from the run above.</figcaption>
+  </figure>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Diagram, full size">
+    <div class="lightbox-bar"><span class="mono">Play 01 · full size · scroll to read</span><button class="close" id="close" type="button">Close ✕</button></div>
+    <div class="lightbox-inner">
+      <video src="graphic.mp4?v=3" poster="poster.png?v=3" muted loop playsinline width="1080" height="1920"></video>
+    </div>
+  </dialog>
+
+  <section class="simple" id="how" aria-labelledby="why-title">
+    <h2 id="why-title">Why it works</h2>
+    <p>When a company raises money, the law makes it tell the SEC. When it posts a job, it tells everyone what it wants to fix next.</p>
+    <p>If both happen in the same week, the company has money and a plan. If the plan is the job your product helps with, you have a good reason to say hello.</p>
+
+    <h2 style="margin-top:56px">How it works</h2>
+    <ol class="plain-steps">
+      <li>Read the list of companies that told the SEC they raised money this week.</li>
+      <li>Throw out the investment funds. Keep the tech companies.</li>
+      <li>Look for each company's jobs page.</li>
+      <li>Keep the ones hiring the role your product helps.</li>
+      <li>Check each one by hand. Then write a short note about their raise and their new hire.</li>
+    </ol>
+  </section>
+
+
+  <section class="simple wide" id="roles" aria-labelledby="roles-title">
+    <h2 id="roles-title">Roles we found in this run</h2>
+    <p>Real open jobs at the freshly funded tech companies from this run, pulled on 8 Nov 2026. Each company's jobs page was checked against its SEC filing. Jobs close fast, so some links may expire.</p>
+    <div class="filters role-filters" role="group" aria-label="Filter roles"></div>
+    <div class="roles" id="roles-list"></div>
+    <p class="roles-note mono" id="roles-note"></p>
+  </section>
+
+  <section class="simple" aria-labelledby="free-title">
+    <h2 id="free-title">Is the data really free?</h2>
+    <p>Yes. No sign-up and no API key. Here is what each source says about itself.</p>
+    <div class="proof">
+      <article><h3>SEC EDGAR<small class="mono">raises</small></h3>
+        <p>The SEC says <q>Anyone can access and download this information for free</q>. You add your name and email to each request, and stay under 10 requests a second. <a href="https://www.sec.gov/os/accessing-edgar-data" rel="noopener">sec.gov →</a></p></article>
+      <article><h3>Greenhouse<small class="mono">jobs</small></h3>
+        <p>Greenhouse says <q>authentication is not required for any GET endpoints</q>. Reading jobs is open. <a href="https://developers.greenhouse.io/job-board.html" rel="noopener">greenhouse.io →</a></p></article>
+      <article><h3>Lever<small class="mono">jobs</small></h3>
+        <p>Lever says published job postings are <q>publicly viewable</q>. A key is only needed to send applications, which we never do. <a href="https://github.com/lever/postings-api" rel="noopener">lever docs →</a></p></article>
+      <article><h3>Ashby<small class="mono">jobs</small></h3>
+        <p>Ashby's own example is a plain request with no key. It returns the jobs a company already shows on its careers page. <a href="https://developers.ashbyhq.com/docs/public-job-posting-api" rel="noopener">ashbyhq.com →</a></p></article>
+    </div>
+  </section>
+
+  <section class="simple" aria-labelledby="oops-title">
+    <h2 id="oops-title">Where it can go wrong</h2>
+    <div class="oops">
+      <div><b>Two companies can share a name.</b>We might find the wrong jobs page. That is why step 5 checks each one by hand.</div>
+      <div><b>Some jobs pages are hidden.</b>If a company posts jobs somewhere we don't look, it won't show up.</div>
+      <div><b>Some raises are late or missing.</b>A company can file late, or not file at all. We can only see what was filed.</div>
+    </div>
+  </section>
+
+  <section id="prompt" aria-labelledby="prompt-title">
+    <div class="sec-head"><h2 id="prompt-title" style="font:400 44px/1.05 var(--serif)">Run it in Claude Code</h2>
+      <p class="mono">Pick a version. Paste it in. Answer 3 questions.</p></div>
+    <div class="prompt">
+      <div class="prompt-head"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><div class="tabs" role="tablist" aria-label="Prompt version"><button class="tab" role="tab" aria-selected="true" data-p="prompt-text">For sellers</button><button class="tab" role="tab" aria-selected="false" data-p="prompt-jobs">For job seekers</button></div>
+        <button class="copy" id="copy" type="button">Copy prompt</button></div>
+<pre id="prompt-text">You are running "Play 01: Fresh Capital + Open Role" from GTM Signal Plays by Asshvin Kumar.
+
+Goal: build a short, verified list of software companies that just reported a raise to the SEC (Form D) AND are hiring the role my product serves. Then draft one message per company, built only from those public records.
+
+Rules
+- Use only free public data and the script below. No paid tools, no logins, no LinkedIn automation.
+- Never invent a fact. Every claim in a brief or message must trace to the Form D filing or the job post it came from. Mark anything inferred as "assumed".
+- Respect SEC fair access: at most 10 requests a second, with my real name and email in the User-Agent.
+- Do not send anything. I review and send myself.
+
+Step 0. Before writing any code, ask me:
+  1. My name and email (for the SEC User-Agent).
+  2. What my product does, in one sentence.
+  3. The job titles my product serves. Turn my words into a case-insensitive regex and show it to me.
+
+Step 1. Set up
+  mkdir -p play-01-fresh-capital &amp;&amp; cd play-01-fresh-capital
+  curl -fsSL __RUN_PY_URL__ -o run.py
+  Read run.py fully. Tell me in 5 bullets what it does and which URLs it calls. It needs Python 3.9+ and nothing else.
+
+Step 2. Run it on the last 14 days
+  SEC_USER_AGENT="&lt;my name&gt; &lt;my email&gt;" python3 run.py --days 14 --roles "&lt;regex from step 0&gt;"
+  It writes out/&lt;date&gt;/accounts.csv, summary.json and briefs.md. Show me the funnel counts from summary.json.
+
+Step 3. Verify before trusting it
+  For every Tier 1 row (or 10 at random if there are more):
+  - open the Form D link and confirm the company name, filing date and amount;
+  - open the job link and confirm the role is live at the same company. For slug-only matches, compare the board's website, company description and job locations with the filing's state;
+  - remove or downgrade any row that fails, and tell me why.
+  Save the result as verified.csv.
+
+Step 4. Brief each verified company (5 lines max) in briefs-verified.md
+  What they raised and when; the role they opened; who signed the filing; the problem that role is likely hired to fix (mark as assumed); why my product fits that problem.
+
+Step 5. Draft one message per company in messages.md (under 90 words)
+  - To the executive named on the filing or the hiring manager.
+  - Open with the record: the raise and the open role, with dates. Not with me.
+  - Give one useful observation they can act on even if they never reply.
+  - End with one low-effort question. No links, no "hope you're well", no fake familiarity.
+  Then reread each draft as the buyer: would they forward it to a colleague? Rewrite any that would be deleted.
+
+Step 6. Hand over
+  verified.csv, briefs-verified.md, messages.md, and a 3-line summary with the funnel counts. Suggest the --roles regex and --days window for next week's run.</pre>
+<pre id="prompt-jobs" hidden>You are running "Play 01 for job seekers: Fresh Capital + Open Role" from GTM Signal Plays by Asshvin Kumar.
+
+Goal: find jobs at software companies that just raised money (SEC Form D) and are hiring for roles that fit my resume. Then help me write a short, honest note for each.
+
+Rules
+- Use only free public data and the script below. No logins, no auto-applying, no LinkedIn automation.
+- My resume stays on my computer. Read it locally and never upload it anywhere.
+- Never invent facts about me or the company. Every claim must trace to my resume, the Form D filing or the job post.
+
+Step 0. Ask me 3 things before doing anything:
+  1. The path to my resume on this computer (PDF, DOCX or TXT).
+  2. The roles I want (for example: forward deployed engineer, GTM engineer, product manager). Turn them into a case-insensitive regex and show it to me.
+  3. Where I can work (cities, remote, countries), plus my name and email for the SEC User-Agent.
+
+Step 1. Read my resume locally. List my top 8 skills and my 3 strongest results with numbers. Let me correct them.
+
+Step 2. Set up
+  mkdir -p play-01-jobs &amp;&amp; cd play-01-jobs
+  curl -fsSL __RUN_PY_URL__ -o run.py
+  Read run.py fully. Tell me in 5 bullets what it does and which URLs it calls.
+
+Step 3. Run it on the last 30 days (the SEC step takes 15 to 20 minutes)
+  SEC_USER_AGENT="&lt;my name&gt; &lt;my email&gt;" python3 run.py --days 30 --roles "&lt;regex from step 0&gt;"
+  It writes out/&lt;date&gt;/jobs.csv: every open role at those companies, with the raise amount and filing date.
+
+Step 4. Filter and rank
+  Keep roles that match my regex and my locations. Check each company's jobs page really belongs to the company on the filing (name, website, job locations vs the filing's state); drop any that fail and tell me why.
+  Rank the rest by fit with my resume. Show the top 10 as a table: role, company, location, raised, filed, fit 1-5, one-line why, link.
+
+Step 5. For my top 5, write notes.md:
+  - Why this company, now: the raise and the open role, with dates.
+  - The 2 parts of my resume that best match the job post, quoted from my resume.
+  - A 70-word note to the hiring manager. Open with their news, not with me. No buzzwords.
+
+Step 6. Hand over jobs-shortlist.csv and notes.md. Do not apply or send anything. I do that myself.</pre>
+      <div class="prompt-foot">Want the script on its own? <a href="run.py" download>Download run.py</a> (Python 3.9+, nothing to install).</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap"><span class="mono">Asshvin Kumar · GTM Signal Plays</span><span class="mono"><a href="../../" style="text-decoration:none">All plays →</a></span></div>
+</footer>
+
+<!-- Source of truth: plays/01-fresh-capital-open-role/out/2026-11-08/summary.json -->
+<script id="receipt-data" type="application/json">
+{ "window": "2026-10-31 to 2026-11-06", "run_at": "2026-11-08T22:35:36", "form_d_new": 844, "operating": 293, "tech": 84, "with_board": 10, "tier1": 4 }
+</script>
+<script>
+  const R = JSON.parse(document.getElementById('receipt-data').textContent);
+  document.querySelector('[data-r="window_label"]').textContent =
+    'SEC filings ' + R.window.replace(' to ', ' → ') + ' · ran ' + R.run_at.slice(0, 10);
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const counters = [...document.querySelectorAll('.steps-row [data-r]')];
+  const countUp = () => counters.forEach((el) => {
+    const target = R[el.dataset.r] || 0;
+    if (reduce) { el.textContent = target.toLocaleString('en-US'); return; }
+    const t0 = performance.now();
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / 1200), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * e).toLocaleString('en-US');
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+  // count up when the receipt scrolls into view
+  new IntersectionObserver((entries, obs) => {
+    if (entries.some((e) => e.isIntersecting)) { countUp(); obs.disconnect(); }
+  }, { threshold: 0.4 }).observe(document.getElementById('receipt'));
+
+  // expand the diagram
+  const box = document.getElementById('lightbox');
+  const bigVideo = box.querySelector('video');
+  const openBox = () => { box.showModal(); box.scrollTop = 0; bigVideo.currentTime = 0; bigVideo.play(); };
+  document.getElementById('expand').addEventListener('click', openBox);
+  document.getElementById('clip').addEventListener('click', openBox);
+  document.getElementById('close').addEventListener('click', () => { bigVideo.pause(); box.close(); });
+  box.addEventListener('close', () => bigVideo.pause());
+
+  // prompt: point the download at this site, and copy
+  const runUrl = new URL('run.py', location.href).href;
+  ['prompt-text', 'prompt-jobs'].forEach((id) => { const el = document.getElementById(id); el.textContent = el.textContent.replace('__RUN_PY_URL__', runUrl); });
+  const visiblePrompt = () => document.querySelector('.prompt pre:not([hidden])');
+  const btn = document.getElementById('copy');
+  btn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(visiblePrompt().textContent); btn.textContent = 'Copied'; }
+    catch (err) {
+      const range = document.createRange(); range.selectNodeContents(visiblePrompt());
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
+      btn.textContent = 'Press Ctrl/Cmd + C';
+    }
+    setTimeout(() => { btn.textContent = 'Copy prompt'; }, 2000);
+  });
+</script>
+<script id="roles-data" type="application/json">{"as_of":"2026-11-08","counts":{"FDE & solutions":21,"GTM engineering":1,"Product":8,"Marketing":24,"Sales":61},"total_open_roles_all_boards":448,"examples":{"FDE & solutions":[{"t":"Forward Deployed Engineer","c":"Uncovr","l":"US - East Coast","u":"https://jobs.ashbyhq.com/uncovr/be4db295-6b96-481f-9317-132d60fc0b0c","r":5144983,"f":"11/06"},{"t":"Data Solutions Architect (Financial Services)","c":"SunnyData","l":"United States","u":"https://jobs.ashbyhq.com/SunnyData/aa21adce-fc31-410c-86a1-2ed83b9a596f","r":4995000,"f":"11/05"},{"t":"Principal Solutions Architect (Financial Services)","c":"SunnyData","l":"United States","u":"https://jobs.ashbyhq.com/SunnyData/d81ce62f-5dd7-439e-9d0b-adffde1616fe","r":4995000,"f":"11/05"},{"t":"Deployment Strategist","c":"Serval","l":"San Francisco","u":"https://jobs.ashbyhq.com/Serval/565c665a-c632-448b-87c5-849bc095de05","r":149212926,"f":"11/03"},{"t":"Solutions Engineer - Majors","c":"Serval","l":"San Francisco","u":"https://jobs.ashbyhq.com/Serval/c77d8ff1-2f28-409e-9afc-56317b8e7e41","r":149212926,"f":"11/03"}],"GTM engineering":[{"t":"GTM Systems","c":"Legora","l":"New York City","u":"https://jobs.ashbyhq.com/legora/a465beed-5aac-4fdf-9a79-fca07c11fe3c","r":220820026,"f":"11/04"}],"Product":[{"t":"Head of Product","c":"Multiply Labs","l":"San Francisco","u":"https://jobs.lever.co/multiplylabs/7117520e-6a09-4321-9dcc-b2d1e7708f2e","r":52250260,"f":"11/05"},{"t":"Senior Product Manager - Monetization ","c":"Legora","l":"New York City","u":"https://jobs.ashbyhq.com/legora/2dfdbd92-5307-49a0-80ab-fa95824474f0","r":220820026,"f":"11/04"},{"t":"Senior Product Manager - Enterprise","c":"Legora","l":"New York City","u":"https://jobs.ashbyhq.com/legora/ff561bd0-36a7-4471-8c79-3e2dc830854f","r":220820026,"f":"11/04"}],"Marketing":[{"t":"Product Marketing Lead","c":"Serval","l":"San Francisco","u":"https://jobs.ashbyhq.com/Serval/204d22ce-8b83-4c56-9810-b40dcbcc9ca2","r":149212926,"f":"11/03"},{"t":"Senior Strategic Field Marketing Manager, West","c":"Serval","l":"San Francisco","u":"https://jobs.ashbyhq.com/Serval/f89aa732-8b6c-4c8c-9b7b-de5e6b396440","r":149212926,"f":"11/03"},{"t":"B2C Marketing Lead","c":"Summer","l":"Remote - U.S.","u":"https://job-boards.greenhouse.io/summer/jobs/8197806003","r":1566779,"f":"11/02"},{"t":"Senior Product Marketing Manager, Pricing and Packaging","c":"Legora","l":"New York City","u":"https://jobs.ashbyhq.com/legora/08a90694-c366-4d82-a9da-72f80e7b0340","r":220820026,"f":"11/04"},{"t":"Senior Product Marketing Manager, Partnerships","c":"Legora","l":"New York City","u":"https://jobs.ashbyhq.com/legora/134bcd91-ac6e-41d6-82be-fdbf5c6dd989","r":220820026,"f":"11/04"}],"Sales":[{"t":"Business Development Manager","c":"Contoro","l":"Buena Park, CA","u":"https://jobs.ashbyhq.com/contoro/5fbb4778-6b11-4bf8-82f7-650bd7edfe83","r":10999943,"f":"11/05"},{"t":"VP of Commercial Strategy & Partnerships","c":"Multiply Labs","l":"San Francisco","u":"https://jobs.lever.co/multiplylabs/5e5b9acb-f0c6-4dd7-86a6-5cb39c003c77","r":52250260,"f":"11/05"},{"t":"Account Executive, Majors - West","c":"Serval","l":"San Francisco","u":"https://jobs.ashbyhq.com/Serval/5d3e213d-cdda-458e-a57f-b39ab1cb7456","r":149212926,"f":"11/03"},{"t":"Sales Manager, Mid-Market - East","c":"Serval","l":"New York","u":"https://jobs.ashbyhq.com/Serval/0ba1342d-9714-4653-a2bd-bb1cccb89ad1","r":149212926,"f":"11/03"},{"t":"Account Executive, SMB","c":"Legora","l":"Denver","u":"https://jobs.ashbyhq.com/legora/41ce10ab-8cb7-4923-a2e3-819875689a7c","r":220820026,"f":"11/04"}]}}</script>
+<script>
+  // roles from the run
+  const RD = JSON.parse(document.getElementById('roles-data').textContent);
+  const list = document.getElementById('roles-list'), bar = document.querySelector('.role-filters');
+  const money = (n) => n == null ? 'amount not filed' : '$' + (n >= 1e6 ? (n / 1e6).toFixed(n >= 1e8 ? 0 : 1) + 'M' : Math.round(n / 1e3) + 'K');
+  const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const draw = (b) => {
+    list.innerHTML = RD.examples[b].map((r) => `<a class="role" href="${esc(r.u)}" target="_blank" rel="noopener">
+      <span class="role-t">${esc(r.t)}</span><span class="role-c">${esc(r.c)} · ${esc(r.l)}</span>
+      <span class="role-m mono">raised ${money(r.r)} · filed ${esc(r.f)}</span><span class="role-go mono">View →</span></a>`).join('');
+    document.getElementById('roles-note').textContent =
+      'Showing ' + RD.examples[b].length + ' of ' + RD.counts[b] + ' ' + b + ' roles at checked companies · ' + RD.total_open_roles_all_boards + ' open roles in total';
+    bar.querySelectorAll('.filter').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.b === b)));
+  };
+  Object.keys(RD.examples).forEach((b) => {
+    const btn = document.createElement('button'); btn.className = 'filter'; btn.dataset.b = b;
+    btn.textContent = b + ' · ' + RD.counts[b]; btn.addEventListener('click', () => draw(b)); bar.appendChild(btn);
+  });
+  draw('FDE & solutions');
+
+  // prompt tabs
+  document.querySelectorAll('.tab').forEach((t) => t.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+    ['prompt-text', 'prompt-jobs'].forEach((id) => { document.getElementById(id).hidden = id !== t.dataset.p; });
+  }));
+</script>
+</body>
+</html>
