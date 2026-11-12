@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PZ93NR5M');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fresh Capital + Visa Sponsor · GTM Signal Plays</title>
+<meta name="description" content="Play 06 for job seekers: companies that just raised money, have filed H-1B paperwork before, and are hiring now. Free SEC and Department of Labor data, one Claude Code prompt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZ93NR5M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><i></i>GTM Signal Plays</a>
+    <nav aria-label="Main navigation"><a href="#receipt">The run</a><a href="#how">How it works</a><a class="cta brackets" href="#prompt">Get the prompt</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="play-head" aria-labelledby="play-title">
+    <span class="bracket-tag rise">PLAY 06 · JOB SEEKERS</span>
+    <h1 id="play-title" class="rise d1">Fresh Capital <em>+</em> Visa Sponsor</h1>
+    <p class="lede rise d2">Find companies that just raised money, have filed H-1B paperwork before, and are hiring right now. Then apply with a short note about all three.</p>
+    <div class="facts rise d3">
+      <span><b>SIGNAL A</b>SEC Form D</span>
+      <span><b>SIGNAL B</b>DOL H-1B filings</span>
+      <span><b>SIGNAL C</b>Live job post</span>
+      <span><b>COST</b>$0</span>
+    </div>
+  </section>
+
+  <section class="receipt2" id="receipt" aria-labelledby="receipt-title">
+    <header>
+      <h2 id="receipt-title" class="mono">What happened when I ran it</h2>
+      <span class="mono" data-r="window_label">Window</span>
+    </header>
+    <div class="steps-row">
+      <div><strong data-r="form_d_new">3,557</strong><span>raise filings sent to the SEC</span></div>
+      <div><strong data-r="tech">331</strong><span>were tech companies</span></div>
+      <div><strong data-r="sponsors">25</strong><span>have filed H-1B paperwork before</span></div>
+      <div><strong data-r="hiring">7</strong><span>of those are hiring right now</span></div>
+      <div><strong data-r="tier1">5</strong><span>are hiring for a job like one they sponsored</span></div>
+    </div>
+    <footer id="receipt-foot"><b>Matched by tax ID</b>, not by name: 24 of 25 sponsors. All 7 hiring companies checked by hand (jobs page name and locations against the filings).</footer>
+  </section>
+
+  <figure class="stage" aria-label="Animated diagram of the play">
+    <div class="stage-frame">
+      <video id="clip" src="graphic.mp4?v=2" poster="poster.png?v=2" autoplay muted loop playsinline width="1080" height="1920"></video>
+      <button class="expand" id="expand" type="button" aria-haspopup="dialog">Expand ⤢</button>
+    </div>
+    <figcaption>The whole play in 13 seconds. Every number comes from the run above.</figcaption>
+  </figure>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Diagram, full size">
+    <div class="lightbox-bar"><span class="mono">Play 06 · full size · scroll to read</span><button class="close" id="close" type="button">Close ✕</button></div>
+    <div class="lightbox-inner"><video src="graphic.mp4?v=2" poster="poster.png?v=2" muted loop playsinline width="1080" height="1920"></video></div>
+  </dialog>
+
+  <section class="simple" id="how" aria-labelledby="why-title">
+    <h2 id="why-title">Why it works</h2>
+    <p>If you need a visa, the hardest part is finding companies that will sponsor one. Most job posts don't say.</p>
+    <p>But when a company wants to hire someone on an H-1B visa, it first has to file a wage form with the Department of Labor. Those forms are public. So are the SEC forms a company files when it raises money.</p>
+    <p>Put the two together with a live job post, and you get a short list: companies with new money, a history of sponsoring, and a job open right now.</p>
+
+    <h2 style="margin-top:48px">How it works</h2>
+    <ol class="plain-steps">
+      <li>Run Play 01 to get tech companies that just raised money, and their open jobs.</li>
+      <li>Read each company's tax ID from the same SEC filing.</li>
+      <li>Look up that tax ID in the Department of Labor's H-1B filings.</li>
+      <li>Keep the companies that filed before and are hiring now. Flag jobs like ones they sponsored.</li>
+      <li>Claude reads your resume on your computer, ranks the jobs, and drafts a short note for each.</li>
+    </ol>
+  </section>
+
+  <section class="simple wide" id="roles" aria-labelledby="roles-title">
+    <h2 id="roles-title">Jobs at companies that have sponsored before</h2>
+    <p id="roles-intro">Real open jobs from this run. Every company here matched the Department of Labor data by tax ID.</p>
+    <div class="filters role-filters" role="group" aria-label="Filter companies"></div>
+    <div class="roles" id="roles-list"></div>
+    <p class="roles-note mono" id="roles-note"></p>
+  </section>
+
+  <section class="simple" aria-labelledby="free-title">
+    <h2 id="free-title">Is the data really free?</h2>
+    <p>Yes. No sign-up and no API key. Both government sources ask you to put your name and email in each request.</p>
+    <div class="proof">
+      <article><h3>SEC EDGAR<small class="mono">raises + tax ID</small></h3>
+        <p>The SEC says <q>Anyone can access and download this information for free</q>. Stay under 10 requests a second. <a href="https://www.sec.gov/os/accessing-edgar-data" rel="noopener">sec.gov →</a></p></article>
+      <article><h3>Department of Labor<small class="mono">H-1B filings</small></h3>
+        <p>The Office of Foreign Labor Certification posts every quarter's H-1B wage filings as a free Excel file, about 250 MB. <a href="https://www.dol.gov/agencies/eta/foreign-labor/performance" rel="noopener">dol.gov →</a></p></article>
+      <article><h3>Greenhouse, Lever, Ashby<small class="mono">open jobs</small></h3>
+        <p>Their public job board APIs need no key to read published jobs. Same sources as Play 01. <a href="../01-fresh-capital-open-role/#how" rel="noopener">see Play 01 →</a></p></article>
+    </div>
+  </section>
+
+  <section class="simple" aria-labelledby="oops-title">
+    <h2 id="oops-title">Where it can go wrong</h2>
+    <div class="oops">
+      <div><b>A filing is not a visa.</b>The wage form is a first step. It shows the company was ready to sponsor, not that a visa was granted.</div>
+      <div><b>The past is not a promise.</b>A company that sponsored before may not sponsor this job. Ask early and politely.</div>
+      <div><b>The data runs about 4 months behind.</b>The newest Department of Labor filing in this run is from June 30, 2026. A company that started sponsoring after that won't show yet.</div>
+      <div><b>Names lie. Tax IDs don't.</b>In the Labor data, 219 company names are shared by two or more different tax IDs. That's why we match on the tax ID. If a filing has no tax ID, we match by exact name, mark it "name-only", and you check it by hand.</div>
+      <div><b>"Similar job" is a hint, not a promise.</b>We flag a job when its title shares two real words with a title they sponsored. Generic titles like "Member of Technical Staff" match a lot, so read the job before you count on it.</div>
+    </div>
+  </section>
+
+  <section id="prompt" aria-labelledby="prompt-title">
+    <div class="sec-head"><h2 id="prompt-title" style="font:400 32px/1.05 var(--serif)">Run it in Claude Code</h2>
+      <p class="mono">Paste it in. Answer 3 questions. Your resume stays on your computer.</p></div>
+    <div class="prompt">
+      <div class="prompt-head"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="mono">play-06.prompt</span>
+        <button class="copy" id="copy" type="button">Copy prompt</button></div>
+<pre id="prompt-text">You are running "Play 06: Fresh Capital + Visa Sponsor" from GTM Signal Plays by Asshvin Kumar.
+
+Goal: find jobs at tech companies that just raised money (SEC Form D), have filed H-1B wage forms before (U.S. Department of Labor), and are hiring now. Rank them against my resume and help me write a short, honest note for each.
+
+Rules
+- Use only free public data and the scripts below. No logins, no auto-applying, no LinkedIn automation.
+- My resume stays on my computer. Read it locally and never upload it anywhere.
+- Never invent facts about me or the company. A DOL filing shows the company was ready to sponsor before; never tell me a visa is guaranteed.
+- Respect SEC and DOL fair access: my real name and email in the User-Agent, at most 10 requests a second to SEC.
+
+Step 0. Ask me 3 things before doing anything:
+  1. The path to my resume on this computer (PDF, DOCX or TXT).
+  2. The roles I want. Turn them into a case-insensitive regex and show it to me.
+  3. Where I can work, plus my name and email for the User-Agent.
+
+Step 1. Read my resume locally. List my top 8 skills and 3 strongest results with numbers. Let me correct them.
+
+Step 2. Set up
+  mkdir -p play-06 &amp;&amp; cd play-06 &amp;&amp; mkdir -p data
+  curl -fsSL __PLAY01_URL__ -o play01.py
+  curl -fsSL __BUILD_URL__ -o build_index.py
+  curl -fsSL __RUN06_URL__ -o run.py
+  Read all three scripts. Tell me in 5 bullets what they do and which URLs they call.
+
+Step 3. Get the data
+  SEC_USER_AGENT="&lt;name&gt; &lt;email&gt;" python3 play01.py --days 30 --out out/play01
+  (about 15 to 20 minutes; it respects SEC's rate limit)
+  Find the newest "LCA_Disclosure_Data" Excel file on https://www.dol.gov/agencies/eta/foreign-labor/performance and download it to data/ with curl -fL -A "&lt;name&gt; &lt;email&gt;".
+  uv run --with python-calamine python build_index.py data/&lt;that file&gt;.xlsx
+  (if uv is missing: pip install python-calamine, then python3 build_index.py ...)
+
+Step 4. Join
+  SEC_USER_AGENT="&lt;name&gt; &lt;email&gt;" python3 run.py --play01 out/play01 --roles "&lt;regex from step 0&gt;"
+  Show me summary.json in plain words.
+
+Step 5. Filter, check and rank
+  Keep roles that match my locations. For any "name-only" match, check the company by hand and drop it if unsure.
+  Rank by fit with my resume, and put roles marked similar_title_sponsored=yes higher. Show the top 10 as a table: role, company, location, raised, H-1B filings, similar role sponsored, fit 1-5, one-line why, link.
+
+Step 6. For my top 5, write notes.md:
+  - Why this company, now: the raise, the open role, and that they have filed H-1B paperwork before (with the count).
+  - The 2 parts of my resume that best match the job, quoted from my resume.
+  - A 70-word note to the hiring manager. Open with their news, not with me. Ask about sponsorship plainly in one line.
+
+Step 7. Hand over shortlist.csv and notes.md. Do not apply or send anything. I do that myself.</pre>
+      <div class="prompt-foot">Scripts: <a href="../01-fresh-capital-open-role/run.py" download>play01.py</a> · <a href="build_index.py" download>build_index.py</a> · <a href="run.py" download>run.py</a> (Python 3.9+; build_index.py needs the free python-calamine library to read Excel).</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap"><span class="mono">Asshvin Kumar · GTM Signal Plays</span><span class="mono"><a href="../../" style="text-decoration:none">All plays →</a></span></div>
+</footer>
+
+<script id="receipt-data" type="application/json">{"window": "2026-10-12 to 2026-11-10", "dol": "FY2026 Q3", "run_at": "2026-11-11T18:13:02", "form_d_new": 3557, "tech": 331, "sponsors": 25, "by_ein": 24, "hiring": 7, "tier1": 5}</script>
+<script id="roles-data" type="application/json">{"companies": {"Commure": {"h1b": 41, "raised": 70089315, "open": 71, "titles": "Software Engineer II | Operations Manager | Senior Software Engineer", "match": "EIN", "roles": [{"t": "Staff Software Engineer, Billing Agents", "l": "Mountain View, CA", "u": "https://jobs.ashbyhq.com/Commure/260bc248-ed7d-4d10-bcc5-158139231a38", "s": true}, {"t": "Software Engineer, AI Integrations", "l": "Mountain View, CA", "u": "https://jobs.ashbyhq.com/Commure/39e07152-a3d2-47c0-8c5b-36e8b3a6cdf5", "s": true}, {"t": "Software Engineer, Athelas Home", "l": "Sao Paulo, Brazil", "u": "https://jobs.ashbyhq.com/Commure/6a421e56-45ee-4ef9-9d6d-6454b3bcb3e7", "s": true}, {"t": "Senior Operations Manager, Ambient Infrastructure", "l": "Mountain View, CA", "u": "https://jobs.ashbyhq.com/Commure/b2533ad5-9df9-4e46-a184-1445f526af4c", "s": true}, {"t": "Senior Software Engineer, AI Integrations", "l": "Mountain View, CA", "u": "https://jobs.ashbyhq.com/Commure/ee0220cc-ecec-413f-a22a-4d4d229683de", "s": true}, {"t": "Software Engineer, AI Billing", "l": "Mountain View, CA", "u": "https://jobs.ashbyhq.com/Commure/727c0ce9-7d3b-43fe-8d00-05255f094db5", "s": true}]}, "Armadin": {"h1b": 11, "raised": 264999494, "open": 25, "titles": "Software Engineer | Software Engineer (DevOps, Infrastructure & Automation) | Senior Software Engineer", "match": "EIN", "roles": [{"t": "Inside Sales Representative - Central", "l": "Palo Alto", "u": "https://jobs.ashbyhq.com/armadin/bed26153-8b23-4de0-9ec8-693e0326257c", "s": false}, {"t": "Inside Sales Representative - Palo Alto", "l": "Palo Alto", "u": "https://jobs.ashbyhq.com/armadin/2c4fd030-0a8f-4ed5-834d-e9de45e2b2b9", "s": false}, {"t": "Inside Sales Representative - Washington, DC", "l": "Washington, DC", "u": "https://jobs.ashbyhq.com/armadin/f82c9ba4-3113-4f9c-a7ab-530c14c67b4e", "s": false}, {"t": "Managing Principal, Red Team Operator", "l": "Palo Alto", "u": "https://jobs.ashbyhq.com/armadin/906e5350-1f80-453d-a7a6-0c9c697ea15e", "s": false}, {"t": "Member of Technical Staff - Research", "l": "Palo Alto", "u": "https://jobs.ashbyhq.com/armadin/241e4cb9-f99d-444c-a0f2-66cb39ac45bb", "s": false}, {"t": "Regional Sales Manager | Los Angeles", "l": "Remote", "u": "https://jobs.ashbyhq.com/armadin/6fe8f6f3-7eb8-44b2-8f45-8a0fc99fb8de", "s": false}]}, "Modal Labs": {"h1b": 8, "raised": 601892375, "open": 44, "titles": "Member of Technical Staff | Security Engineer | Member of Design Staff", "match": "EIN", "roles": [{"t": "Member of Technical Staff - Systems", "l": "New York", "u": "https://jobs.ashbyhq.com/modal/9b33ebe7-e829-4f03-97ba-5c94dbd7daf6", "s": true}, {"t": "Forward Deployed Engineer - ML", "l": "New York", "u": "https://jobs.ashbyhq.com/modal/9fadb51f-ce11-41b1-84d5-470e66cc8ee9", "s": true}, {"t": "Member of Technical Staff - ML Performance", "l": "New York", "u": "https://jobs.ashbyhq.com/modal/af17da5e-23ca-4802-854d-5f0546e1ed32", "s": true}, {"t": "Member of Technical Staff - SDK", "l": "San Francisco", "u": "https://jobs.ashbyhq.com/modal/265d6127-dd34-433b-819a-1f935572c7d8", "s": true}, {"t": "Forward Deployed Engineer - Systems", "l": "New York", "u": "https://jobs.ashbyhq.com/modal/cbbbee50-3d3b-4873-8ae8-ff4b885b8e54", "s": true}, {"t": "Member of Design Staff - Brand", "l": "New York", "u": "https://jobs.ashbyhq.com/modal/23311dfd-2a80-40dc-a41c-1ff7202e15a2", "s": true}]}, "Contoro": {"h1b": 7, "raised": 10999943, "open": 10, "titles": "Director of Product and Systems Engineering | Robotics Engineer, Perception | Director of Business Operations and Strategy", "match": "EIN", "roles": [{"t": "Jr./Sr.  level Robotics Engineer, Perception", "l": "Austin, TX", "u": "https://jobs.ashbyhq.com/contoro/5ebaad34-0141-4f91-ad22-68311e58eec0", "s": true}, {"t": "Robotics Engineer Intern - Test & Validation (Fall 2026)", "l": "Austin, TX", "u": "https://jobs.ashbyhq.com/contoro/cf7c8043-8fbe-4c7e-b91f-ee6db2a616c5", "s": true}, {"t": "Robotics Test & Validation Intern (Test Team)", "l": "Austin, TX", "u": "https://jobs.ashbyhq.com/contoro/7de98745-6a26-4a96-b82c-0cecf4900eb1", "s": true}, {"t": "Sr. Robotics Engineer, Motion Planning", "l": "Austin, TX", "u": "https://jobs.ashbyhq.com/contoro/ad34a874-deb3-4bc0-959b-87650ac1a219", "s": true}, {"t": "Talent Acquisition Specialist", "l": "Austin, TX", "u": "https://jobs.ashbyhq.com/contoro/d5d8dacd-af71-479d-b103-6f0471f47525", "s": false}, {"t": "Business Development Manager", "l": "Buena Park, CA", "u": "https://jobs.ashbyhq.com/contoro/5fbb4778-6b11-4bf8-82f7-650bd7edfe83", "s": false}]}, "Multiply Labs": {"h1b": 4, "raised": 52250260, "open": 14, "titles": "Senior Mechanical Engineer | Robotics Field Engineer | Advanced Software Engineer", "match": "EIN", "roles": [{"t": "Robotics Engineer", "l": "Milan/Pavia/Turin", "u": "https://jobs.lever.co/multiplylabs/085e47ce-44eb-4103-8977-e83a034281a2", "s": true}, {"t": "Robotics HW Engineer", "l": "San Francisco", "u": "https://jobs.lever.co/multiplylabs/04ae7064-39cc-421f-beee-41b7f9266c27", "s": true}, {"t": "Senior / Staff Robotics Research Scientist - Dexterous & Mobile Manipulation", "l": "San Francisco", "u": "https://jobs.lever.co/multiplylabs/0aef7837-c7d7-4dad-a090-b42d54de0ec3", "s": true}, {"t": "Staff Software Engineer, Infrastructure", "l": "San Francisco", "u": "https://jobs.lever.co/multiplylabs/a184518b-cbbc-474d-a758-d46fa2587fa9", "s": true}, {"t": "Head of Product", "l": "San Francisco", "u": "https://jobs.lever.co/multiplylabs/7117520e-6a09-4321-9dcc-b2d1e7708f2e", "s": false}, {"t": "Marketing & Communications Manager", "l": "San Francisco", "u": "https://jobs.lever.co/multiplylabs/a1e4436a-2691-4d2a-bb7f-22bc9de175bd", "s": false}]}, "Legora": {"h1b": 1, "raised": 220820026, "open": 329, "titles": "Strategic Programs Manager", "match": "EIN", "roles": [{"t": "Strategic Programs Manager", "l": "New York City", "u": "https://jobs.ashbyhq.com/legora/776af495-52b1-4071-950e-83dbfb84773c", "s": true}, {"t": "Strategic Programs Manager", "l": "London", "u": "https://jobs.ashbyhq.com/legora/1c641ba1-a7eb-47e2-bb8a-7b40b0b91f98", "s": true}, {"t": "Strategic Programs Manager", "l": "Stockholm HQ", "u": "https://jobs.ashbyhq.com/legora/cbc6456a-d4a6-4bc4-99c5-9169de5f9260", "s": true}, {"t": "Engagement Manager - Scaled Accounts", "l": "San Francisco", "u": "https://jobs.ashbyhq.com/legora/865eeaeb-4750-4a5e-818c-413fc2499785", "s": false}, {"t": "GTM Manager - Public Sector", "l": "Sydney", "u": "https://jobs.ashbyhq.com/legora/8fa7b485-0429-470c-90d0-671ba14aed9a", "s": false}, {"t": "People Advisor", "l": "Stockholm HQ", "u": "https://jobs.ashbyhq.com/legora/4dcae997-183b-408c-b701-1390f86a27c8", "s": false}]}, "Serval": {"h1b": 1, "raised": 149212926, "open": 69, "titles": "Founding Product Designer", "match": "EIN", "roles": [{"t": "GTM Recruiter", "l": "San Francisco", "u": "https://jobs.ashbyhq.com/Serval/91274bc2-d730-40b3-b52b-32ccfe602416", "s": false}, {"t": "Deployment Leadership", "l": "San Francisco", "u": "https://jobs.ashbyhq.com/Serval/9e529850-07ca-4317-817e-21630f63192e", "s": false}, {"t": "Software Engineer, Frontend", "l": "San Francisco", "u": "https://jobs.ashbyhq.com/Serval/a6cb109f-143d-4b46-b77a-1f1cb622a62b", "s": false}, {"t": "Software Engineer, Backend", "l": "San Francisco", "u": "https://jobs.ashbyhq.com/Serval/7928f65b-538e-422f-8c82-cf69910411cc", "s": false}, {"t": "Product Marketing Lead", "l": "San Francisco", "u": "https://jobs.ashbyhq.com/Serval/204d22ce-8b83-4c56-9810-b40dcbcc9ca2", "s": false}, {"t": "Software Engineer, Agent Systems", "l": "San Francisco", "u": "https://jobs.ashbyhq.com/Serval/2bfaede4-22b2-43b2-a14c-f45e5f398624", "s": false}]}}}</script>
+<script>
+  const R = JSON.parse(document.getElementById('receipt-data').textContent);
+  if (R.window) document.querySelector('[data-r="window_label"]').textContent =
+    'SEC filings ' + R.window.replace(' to ', ' → ') + ' · DOL ' + R.dol + ' · ran ' + R.run_at.slice(0, 10);
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const counters = [...document.querySelectorAll('.steps-row [data-r]')];
+  const countUp = () => counters.forEach((el) => {
+    const target = R[el.dataset.r] || 0;
+    if (reduce) { el.textContent = target.toLocaleString('en-US'); return; }
+    const t0 = performance.now();
+    const tick = (now) => { const p = Math.min(1, (now - t0) / 1200), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * e).toLocaleString('en-US'); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  });
+  new IntersectionObserver((entries, obs) => { if (entries.some((e) => e.isIntersecting)) { countUp(); obs.disconnect(); } },
+    { threshold: 0.4 }).observe(document.getElementById('receipt'));
+
+  const box = document.getElementById('lightbox'), bigVideo = box.querySelector('video');
+  const openBox = () => { box.showModal(); box.scrollTop = 0; bigVideo.currentTime = 0; bigVideo.play(); };
+  document.getElementById('expand').addEventListener('click', openBox);
+  document.getElementById('clip').addEventListener('click', openBox);
+  document.getElementById('close').addEventListener('click', () => { bigVideo.pause(); box.close(); });
+  box.addEventListener('close', () => bigVideo.pause());
+
+  const RD = JSON.parse(document.getElementById('roles-data').textContent);
+  const list = document.getElementById('roles-list'), bar = document.querySelector('.role-filters');
+  const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const money = (n) => n == null ? 'amount not filed' : '$' + (n >= 1e6 ? (n / 1e6).toFixed(n >= 1e8 ? 0 : 1) + 'M' : Math.round(n / 1e3) + 'K');
+  const draw = (c) => {
+    const rows = RD.companies[c];
+    list.innerHTML = rows.roles.map((r) => `<a class="role" href="${esc(r.u)}" target="_blank" rel="noopener">
+      <span class="role-t">${esc(r.t)}${r.s ? ' <span class="mono" style="color:var(--accent)">· sponsored similar</span>' : ''}</span>
+      <span class="role-c">${esc(c)} · ${esc(r.l)}</span>
+      <span class="role-m mono">${rows.h1b} H-1B filings · raised ${money(rows.raised)}</span><span class="role-go mono">View →</span></a>`).join('');
+    document.getElementById('roles-note').textContent = 'Showing ' + rows.roles.length + ' of ' + rows.open + ' open roles at ' + c +
+      (rows.titles ? ' · they filed for: ' + rows.titles : '');
+    bar.querySelectorAll('.filter').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.c === c)));
+  };
+  if (RD.companies) {
+    Object.keys(RD.companies).forEach((c) => { const b = document.createElement('button'); b.className = 'filter'; b.dataset.c = c;
+      b.textContent = c; b.addEventListener('click', () => draw(c)); bar.appendChild(b); });
+    draw(Object.keys(RD.companies)[0]);
+  }
+
+  const pre = document.getElementById('prompt-text');
+  pre.textContent = pre.textContent.replace('__PLAY01_URL__', new URL('../01-fresh-capital-open-role/run.py', location.href).href)
+    .replace('__BUILD_URL__', new URL('build_index.py', location.href).href).replace('__RUN06_URL__', new URL('run.py', location.href).href);
+  const btn = document.getElementById('copy');
+  btn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(pre.textContent); btn.textContent = 'Copied'; }
+    catch (err) { const range = document.createRange(); range.selectNodeContents(pre);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range); btn.textContent = 'Press Ctrl/Cmd + C'; }
+    setTimeout(() => { btn.textContent = 'Copy prompt'; }, 2000);
+  });
+</script>
+<script src="../../assets/track.js" defer></script>
+</body>
+</html>
