@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PZ93NR5M');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Seeker Kit · GTM Signal Plays</title>
+<meta name="description" content="For job seekers: use Claude Code and free public records to find companies with a dated reason to hire, check if they are hiring, and write one honest note. Real hit rates included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .tracks { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 20px; }
+  .track { background: var(--bg); padding: 18px 20px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 8px 24px; }
+  .track h3 { font: 400 22px/1.1 var(--serif); margin: 4px 0 6px; }
+  .track p { margin: 0; font-size: 14px; }
+  .track .chain { font: 500 12.5px/1.6 var(--mono); color: var(--accent); }
+  .track .who { font-size: 13px; color: var(--muted); }
+  .track a { font: 500 12px var(--mono); }
+  @media (max-width: 720px) { .track { grid-template-columns: 1fr; } }
+  .rules { counter-reset: r; list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
+  .rules li { counter-increment: r; padding-left: 40px; position: relative; font-size: 15px; }
+  .rules li::before { content: counter(r, decimal-leading-zero); position: absolute; left: 0; top: 1px; font: 600 12px var(--mono); color: var(--accent); }
+  .rules b { display: block; color: var(--ink); }
+  .note-box { border: 1px solid var(--line); background: var(--panel); padding: 18px 20px; margin-top: 16px; font: 500 13.5px/1.7 var(--mono); white-space: pre-wrap; }
+  .math { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 16px; }
+  .math div { background: var(--bg); padding: 16px; }
+  .math strong { display: block; font: 400 34px/1 var(--serif); color: var(--accent); margin-bottom: 6px; }
+  .math span { font-size: 13px; }
+  @media (max-width: 720px) { .math { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZ93NR5M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../"><i></i>GTM Signal Plays</a>
+    <nav aria-label="Main navigation"><a href="#tracks">Pick a record</a><a href="#rules">How to use Claude Code</a><a class="cta brackets" href="#prompt">Get the prompt</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="play-head" aria-labelledby="kit-title">
+    <span class="bracket-tag rise">JOB SEEKER KIT</span>
+    <h1 id="kit-title" class="rise d1">Find companies with a <em>dated reason</em> to hire you</h1>
+    <p class="lede rise d2">Before a company hires, it often has to file something public: a raise, a visa form, an FDA clearance, a government contract. Claude Code can read those records for free, check who is hiring, and help you write one honest note.</p>
+    <p class="lede rise d2">It will not get you a job by itself. It gets you a short list of companies worth your time, and a better first line than "I'd love to join your team".</p>
+    <div class="facts rise d3">
+      <span><b>STEP 1</b>A public record</span>
+      <span><b>STEP 2</b>A live job post</span>
+      <span><b>STEP 3</b>One note that cites both</span>
+      <span><b>COST</b>$0</span>
+    </div>
+  </section>
+
+  <section class="simple wide" id="tracks" aria-labelledby="tracks-title">
+    <h2 id="tracks-title">Pick the record that fits you</h2>
+    <p>Each one is a play I ran on real data. The chain shows what really happened, including how few companies made it to the end.</p>
+    <div class="tracks">
+      <article class="track">
+        <div><span class="mono">Startups · sales, marketing, GTM, engineering</span><h3>They just raised money</h3><p class="who">SEC Form D. A startup files it when it raises from investors.</p></div>
+        <div><p class="chain">3,557 raise filings → 331 tech companies → 29 with a jobs board I could read → 14 hiring for sales, marketing or GTM</p><p class="who">30 days, Oct 12 to Nov 10, 2026.</p><a href="../plays/01-fresh-capital-open-role/">Play 01 →</a></div>
+      </article>
+      <article class="track">
+        <div><span class="mono">You need an H-1B visa</span><h3>They raised, and they have sponsored before</h3><p class="who">Form D plus Department of Labor H-1B wage filings, matched by tax ID.</p></div>
+        <div><p class="chain">331 tech companies → 25 filed H-1B paperwork before → 7 hiring now → 5 hiring for a job like one they sponsored</p><p class="who">Same 30 days. 24 of 25 matched by tax ID.</p><a href="../plays/06-fresh-capital-visa-sponsor/">Play 06 →</a></div>
+      </article>
+      <article class="track">
+        <div><span class="mono">Medtech sales, clinical, marketing</span><h3>The FDA just cleared their device</h3><p class="who">FDA 510(k) clearances. A cleared device can now be sold, so someone has to sell it.</p></div>
+        <div><p class="chain">203 FDA decisions → 185 companies → 3 with a jobs board I could read → 43 open sales and marketing roles</p><p class="who">30 days to Nov 12, 2026. Full page coming.</p></div>
+      </article>
+      <article class="track">
+        <div><span class="mono">Project and program managers, cleared roles</span><h3>They just won a federal contract</h3><p class="who">USAspending.gov. Agencies must report new awards, and the work has to be staffed.</p></div>
+        <div><p class="chain">86 new small-business awards over $1M → 76 winners → 2 with a jobs board I could read → 1 hiring for delivery roles</p><p class="who">30 days, Oct 16 to Nov 14, 2026. Full page coming.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="simple" aria-labelledby="math-title">
+    <h2 id="math-title">The honest math</h2>
+    <p>The record is the easy part. The job board check is where most companies drop out.</p>
+    <div class="math">
+      <div><strong>29 of 331</strong><span>funded tech companies had a Greenhouse, Lever or Ashby board</span></div>
+      <div><strong>3 of 185</strong><span>FDA-cleared companies had one</span></div>
+      <div><strong>2 of 76</strong><span>contract winners had one</span></div>
+    </div>
+    <p style="margin-top:16px">No board does not mean no hiring. It means the script could not read their jobs, so you open their careers page yourself. Do that for your top 10. That is the part a script can't do for you.</p>
+  </section>
+
+  <section class="simple" id="rules" aria-labelledby="rules-title">
+    <h2 id="rules-title">How to use Claude Code for this</h2>
+    <p>The idea comes from Jordan Crawford: start from what a company was forced to publish, not from what it wants you to see. Here is how that turns into a job search.</p>
+    <ol class="rules">
+      <li><b>Start from their situation, not a job title.</b>Ask: "What did this company just have to file that means it needs people?" Then look for the job.</li>
+      <li><b>Let code count. Let Claude judge.</b>Ask Claude Code to write a small script that calls the free API and saves the results to a file. Don't ask it to "find funded startups that are hiring". It will guess.</li>
+      <li><b>Match on IDs, not names.</b>Use the tax ID, the contract ID or the FDA number. In the Labor data, 219 company names are shared by two or more different tax IDs.</li>
+      <li><b>Open the top 5 yourself.</b>Read the filing. Read the job. If the two don't fit together, drop it.</li>
+      <li><b>Write one note that cites the record.</b>Lead with their news, then one result of yours with a number, then one question. Keep it under 70 words.</li>
+      <li><b>Keep your resume on your computer.</b>No auto-applying, no LinkedIn bots, no logging in to anything. You send every note yourself.</li>
+      <li><b>Run it again next week.</b>Records are dated. A fresh list of 10 beats an old list of 500.</li>
+    </ol>
+  </section>
+
+  <section class="simple" aria-labelledby="note-title">
+    <h2 id="note-title">A note that cites the record</h2>
+    <p>Fill in the brackets from the record and your resume. If you can't fill a bracket truthfully, don't send it.</p>
+    <div class="note-box">Hi [first name],
+
+I saw [company] [what the record says, e.g. filed a Form D on (date)] ([source]).
+
+Teams in that spot usually need [the work this job does].
+
+I [one result from your resume, with a number].
+
+Is the [job title] role the right door for that, or is there someone better to ask?</div>
+  </section>
+
+  <section class="simple" aria-labelledby="free-title">
+    <h2 id="free-title">Is the data really free?</h2>
+    <div class="proof">
+      <article><h3>SEC EDGAR<small class="mono">raises</small></h3>
+        <p>The SEC says <q>Anyone can access and download this information for free</q>. Put your own name and email in each request. <a href="https://www.sec.gov/os/accessing-edgar-data" rel="noopener">sec.gov →</a></p></article>
+      <article><h3>USAspending<small class="mono">contracts</small></h3>
+        <p>Its docs say <q>Endpoints do not currently require any authorization.</q> <a href="https://api.usaspending.gov/docs/endpoints" rel="noopener">usaspending.gov →</a></p></article>
+      <article><h3>openFDA<small class="mono">clearances</small></h3>
+        <p>The docs say an API key is required. The key is free, and the docs also list limits for calls without one. Get the free key. <a href="https://open.fda.gov/apis/authentication/" rel="noopener">open.fda.gov →</a></p></article>
+      <article><h3>Greenhouse, Lever, Ashby<small class="mono">open jobs</small></h3>
+        <p>Greenhouse says <q>authentication is not required for any GET endpoints</q>. Lever and Ashby boards are public too. <a href="../plays/01-fresh-capital-open-role/#how" rel="noopener">see Play 01 →</a></p></article>
+    </div>
+  </section>
+
+  <section class="simple" aria-labelledby="oops-title">
+    <h2 id="oops-title">Where it can go wrong</h2>
+    <div class="oops">
+      <div><b>A record is a reason, not a job.</b>Money, a clearance or a contract means they will need people. It does not mean they need you, or this month.</div>
+      <div><b>The job may not be tied to the record.</b>A company hiring after a contract win may be hiring for other work. The posts rarely say.</div>
+      <div><b>Some data runs late.</b>The newest H-1B filing in my run was from June 30, 2026. Contract awards can post late too.</div>
+      <div><b>Small numbers are normal.</b>One real company you can write to with a reason is a good run. Don't pad the list.</div>
+    </div>
+  </section>
+
+  <section id="prompt" aria-labelledby="prompt-title">
+    <div class="sec-head"><h2 id="prompt-title" style="font:400 32px/1.05 var(--serif)">Start in Claude Code</h2>
+      <p class="mono">Paste it in. Answer 4 questions. Your resume stays on your computer.</p></div>
+    <div class="prompt">
+      <div class="prompt-head"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="mono">job-seeker-kit.prompt</span>
+        <button class="copy" id="copy" type="button">Copy prompt</button></div>
+<pre id="prompt-text">You are helping me find companies with a dated, public reason to hire, using the "compelled record" method from GTM Signal Plays by Asshvin Kumar.
+
+Rules
+- Use only free public data. No logins, no auto-applying, no LinkedIn automation, no scraping sites that block bots.
+- My resume stays on my computer. Read it locally. Never upload it.
+- Code counts, you judge. Every company and number must come from a file a script wrote. Never invent a company, a role or a fact about me.
+- Match companies on IDs (tax ID, UEI, FDA number), not names, wherever the record has one.
+- Put my own name and email in the User-Agent when a source asks for it (SEC, Department of Labor).
+
+Step 0. Ask me 4 things:
+  1. The path to my resume (PDF, DOCX or TXT).
+  2. The roles I want. Turn them into a case-insensitive regex and show it to me.
+  3. Where I can work, and whether I need visa sponsorship.
+  4. My name and email for the User-Agent.
+
+Step 1. Pick the record with me:
+  - Startup roles: SEC Form D raises (Play 01).
+  - Visa needed: Form D plus DOL H-1B filings (Play 06).
+  - Medtech sales or clinical: FDA 510(k) clearances (openFDA; I'll get a free key).
+  - Project, program or cleared roles: USAspending new contract awards.
+  Explain your pick in one line.
+
+Step 2. Get the script.
+  For Play 01 or 06, download the scripts linked on their pages, read them, and tell me in 5 bullets what they do and which URLs they call.
+  For FDA or contracts, write a small Python script (standard library only) that pulls the last 30 days, dedupes to one row per company, checks Greenhouse, Lever and Ashby boards for open jobs, and writes summary.json and accounts.csv.
+
+Step 3. Run it. Show me summary.json in plain words, including how many companies had no jobs board.
+
+Step 4. Rank and check.
+  Keep jobs that match my roles and locations. Rank them by fit with my resume.
+  For the top 5, open the source record and the job post, and tell me what you checked.
+  List the top 10 companies with no jobs board, so I can open their careers pages myself.
+
+Step 5. For my top 5, write notes.md:
+  - Why this company, now: the record (with its date and link) and the open job.
+  - The 2 lines of my resume that best match, quoted exactly.
+  - A note under 70 words: their news first, one result of mine with a number, one question.
+
+Step 6. Hand me shortlist.csv and notes.md. Don't send anything. I do that myself.</pre>
+      <div class="prompt-foot">Full plays with scripts: <a href="../plays/01-fresh-capital-open-role/">Play 01</a> · <a href="../plays/06-fresh-capital-visa-sponsor/">Play 06</a>. Method credit: <a href="https://github.com/SantaJordan/gtm-engineer-starter" rel="noopener">Jordan Crawford's free starter</a>.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap"><span class="mono">Asshvin Kumar · GTM Signal Plays</span><span class="mono"><a href="../" style="text-decoration:none">All plays →</a></span></div>
+</footer>
+
+<script>
+  const btn = document.getElementById('copy');
+  const pre = document.getElementById('prompt-text');
+  btn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(pre.textContent); btn.textContent = 'Copied'; }
+    catch (e) { btn.textContent = 'Select and copy'; }
+    setTimeout(() => { btn.textContent = 'Copy prompt'; }, 2000);
+  });
+</script>
+<script src="../assets/track.js" defer></script>
+</body>
+</html>
