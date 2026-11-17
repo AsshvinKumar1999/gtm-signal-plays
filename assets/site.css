@@ -1,11 +1,11 @@
 /* GTM Signal Plays · Asshvin Kumar
-   Dark navy system: framed column, thin borders, serif + light-blue accent, mono labels, bracket corners. */
+   Warm paper system: framed column, thin borders, serif + light-blue accent, mono labels, bracket corners. */
 :root {
-  --bg: #04060c; --bg-2: #080b14; --panel: #0b0f1a; --panel-2: #0f1422;
-  --line: #1b2232; --line-2: #263045;
-  --ink: #eef1f6; --ink-2: #c3cad6; --muted: #8a93a4; --dim: #5d6678;
-  --accent: #8fb3ff; --accent-2: #b7cdff; --accent-ink: #06090f; --accent-soft: rgba(143,179,255,.08);
-  --ok: #7fd6b5;
+  --bg: #f6f1e7; --bg-2: #efe8da; --panel: #fbf8f2; --panel-2: #f2ecdf;
+  --line: #e0d6c3; --line-2: #cbbd9f;
+  --ink: #1d1a16; --ink-2: #3d3830; --muted: #6b6356; --dim: #8f8574;
+  --accent: #2f55c8; --accent-2: #5a7ce0; --accent-ink: #fbf8f2; --accent-soft: rgba(47,85,200,.08);
+  --ok: #2e7d5b;
   --serif: 'Instrument Serif', Georgia, serif;
   --sans: Inter, system-ui, -apple-system, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
@@ -31,7 +31,7 @@ img, video { display: block; max-width: 100%; }
 .brackets::after { bottom: -4px; right: -4px; border-width: 0 1px 1px 0; }
 
 /* nav */
-.nav { position: sticky; top: 0; z-index: 20; background: rgba(4,6,12,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav { position: sticky; top: 0; z-index: 20; background: rgba(246,241,231,.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 500 15px var(--sans); letter-spacing: -.01em; }
 .brand i { width: 14px; height: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; }
@@ -46,7 +46,7 @@ img, video { display: block; max-width: 100%; }
 /* hero */
 .hero { position: relative; padding: 96px 40px 72px; text-align: center; overflow: hidden; border-bottom: 1px solid var(--line); }
 .hero::before { content: ""; position: absolute; inset: -40% -10% 0; pointer-events: none; opacity: .9;
-  background: repeating-radial-gradient(ellipse 120% 90% at 50% 120%, transparent 0 17px, rgba(160,180,220,.07) 17px 18px);
+  background: repeating-radial-gradient(ellipse 120% 90% at 50% 120%, transparent 0 17px, rgba(80,64,36,.09) 17px 18px);
   -webkit-mask-image: radial-gradient(ellipse at 50% 60%, transparent 18%, #000 70%); mask-image: radial-gradient(ellipse at 50% 60%, transparent 18%, #000 70%); }
 .hero > * { position: relative; }
 .bracket-tag { display: inline-block; position: relative; padding: 5px 12px; font: 500 11px var(--mono); letter-spacing: .16em; color: var(--accent); text-transform: uppercase; }
@@ -107,7 +107,7 @@ a.play-card:hover::after { opacity: 1; bottom: 8px; right: 8px; }
 /* play page */
 .play-head { position: relative; text-align: center; padding: 80px 40px 56px; overflow: hidden; border-bottom: 1px solid var(--line); }
 .play-head::before { content: ""; position: absolute; inset: -40% -10% 0; pointer-events: none;
-  background: repeating-radial-gradient(ellipse 120% 90% at 50% 120%, transparent 0 17px, rgba(160,180,220,.06) 17px 18px);
+  background: repeating-radial-gradient(ellipse 120% 90% at 50% 120%, transparent 0 17px, rgba(80,64,36,.08) 17px 18px);
   -webkit-mask-image: radial-gradient(ellipse at 50% 60%, transparent 22%, #000 72%); mask-image: radial-gradient(ellipse at 50% 60%, transparent 22%, #000 72%); }
 .play-head > * { position: relative; }
 .play-head h1 { font: 400 clamp(34px, 4.6vw, 58px)/1.04 var(--serif); letter-spacing: -.02em; margin: 16px 0 14px; white-space: nowrap; }
@@ -132,17 +132,17 @@ a.play-card:hover::after { opacity: 1; bottom: 8px; right: 8px; }
 .stage-frame { position: relative; width: min(400px, 100%); border: 1px solid var(--line-2); padding: 8px; background: var(--bg-2); }
 .stage-frame video { width: 100%; height: auto; aspect-ratio: 9 / 16; background: var(--bg); cursor: zoom-in; }
 .expand { position: absolute; top: 18px; right: 18px; font: 500 10.5px var(--mono); letter-spacing: .14em; text-transform: uppercase;
-  background: rgba(4,6,12,.85); color: var(--ink); border: 1px solid var(--line-2); padding: 8px 11px; cursor: pointer; transition: border-color .2s; }
+  background: rgba(251,248,242,.9); color: var(--ink); border: 1px solid var(--line-2); padding: 8px 11px; cursor: pointer; transition: border-color .2s; }
 .expand:hover { border-color: var(--accent); }
 .stage figcaption { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
 
 /* full-size viewer: the diagram at its real 1080px width, scroll to read */
-dialog.lightbox { width: 100vw; height: 100vh; max-width: none; max-height: none; margin: 0; border: 0; padding: 0; background: rgba(4,6,12,.94); overflow: auto; }
-dialog.lightbox::backdrop { background: rgba(4,6,12,.94); }
+dialog.lightbox { width: 100vw; height: 100vh; max-width: none; max-height: none; margin: 0; border: 0; padding: 0; background: rgba(246,241,231,.97); overflow: auto; }
+dialog.lightbox::backdrop { background: rgba(246,241,231,.97); }
 .lightbox-inner { width: min(1080px, 100%); margin: 0 auto; padding: 64px 0 48px; }
 dialog.lightbox video { width: 100%; height: auto; display: block; border: 1px solid var(--line-2); background: var(--bg); }
 .lightbox-bar { position: fixed; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;
-  background: rgba(4,6,12,.9); border-bottom: 1px solid var(--line); z-index: 2; }
+  background: rgba(246,241,231,.94); border-bottom: 1px solid var(--line); z-index: 2; }
 .close { font: 500 10.5px var(--mono); letter-spacing: .14em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); border: 0; padding: 8px 12px; cursor: pointer; }
 
 .simple { max-width: 680px; margin: 0 auto 72px; }
@@ -167,7 +167,7 @@ dialog.lightbox video { width: 100%; height: auto; display: block; border: 1px s
 .oops div b { display: block; color: var(--ink); font-weight: 500; margin-bottom: 2px; }
 
 /* prompt block */
-.prompt { border: 1px solid var(--line-2); background: #060910; margin: 4px 0 80px; }
+.prompt { border: 1px solid var(--line-2); background: var(--panel); margin: 4px 0 80px; }
 .prompt-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--line); }
 .prompt-head .dots { display: flex; gap: 6px; }
 .prompt-head .dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line-2); }
